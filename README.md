@@ -1,6 +1,6 @@
 # Zappy
 
-**Projet Epitech — 2ème année | Note obtenue : A**
+**Projet Epitech - 2ème année | Note obtenue : A**
 
 Zappy est un jeu multijoueur en réseau où plusieurs équipes s'affrontent sur une carte remplie de ressources. Chaque joueur, piloté par une IA autonome, explore le terrain, se nourrit et récolte des pierres pour évoluer via un rituel d'élévation collectif. L'équipe gagnante est la première à faire atteindre le niveau maximum à six de ses joueurs.
 
@@ -57,10 +57,10 @@ Cette séparation permet de tester chaque composant indépendamment et de réuti
 
 Client de référence pilotant un joueur de façon totalement autonome, architecturé autour d'un **arbre de comportement** (behaviour tree à base de `sequence` / `selector` / `condition`) combiné à un système de **rôles** dynamiques :
 
-- `survivor` — priorité à la survie (seuil de nourriture critique) ;
-- `collector` — exploration et récolte de ressources ;
-- `forker` — gestion de la reproduction pour ouvrir de nouveaux slots d'équipe ;
-- `leader` — coordination des incantations collectives (rassemblement, patience, cooldown).
+- `survivor` - priorité à la survie (seuil de nourriture critique) ;
+- `collector` - exploration et récolte de ressources ;
+- `forker` - gestion de la reproduction pour ouvrir de nouveaux slots d'équipe ;
+- `leader` - coordination des incantations collectives (rassemblement, patience, cooldown).
 
 Un module de **coordination d'équipe** encode des messages compacts sur le canal `broadcast` du jeu (portée et bande passante limitées par le protocole) pour que les bots se recrutent mutuellement et synchronisent les élévations sans canal de communication hors-jeu. Chaque bot maintient sa propre carte mentale du monde (`mental_map`), son inventaire et son champ de vision, et communique avec le serveur via une file de commandes asynchrone respectant la contrainte des 10 requêtes en vol.
 
