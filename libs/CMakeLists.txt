@@ -1,0 +1,7 @@
+add_subdirectory(logger)
+add_subdirectory(game)
+add_subdirectory(protocol)
+add_subdirectory(network_server)
+add_subdirectory(cli)
+add_subdirectory(gui_protocol)
+add_subdirectory(gui_client)

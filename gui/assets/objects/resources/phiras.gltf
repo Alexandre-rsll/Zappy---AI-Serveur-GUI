@@ -1,0 +1,94 @@
+{
+  "asset": {
+    "version": "2.0",
+    "generator": "Codex simple outward resource generator"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "phiras"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "phiras",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1
+          },
+          "mode": 4,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "phiras_mat",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1,
+          0.28,
+          0.36,
+          1
+        ],
+        "metallicFactor": 0.05,
+        "roughnessFactor": 0.72
+      }
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 576,
+      "uri": "data:application/octet-stream;base64,AAAAAAAAgD4AAAAAAAAAAAAAAAAK1yM+CtcjPgAAAAAAAAAAAAAAAAAAgD4AAAAACtcjvgAAAAAAAAAAAAAAAAAAAAAK1yM+AAAAAAAAgD4AAAAAAAAAAAAAAAAK1yO+CtcjvgAAAAAAAAAAAAAAAAAAgD4AAAAACtcjPgAAAAAAAAAAAAAAAAAAAAAK1yO+AAAAADMzs70AAAAACtcjPgAAAAAAAAAAAAAAAAAAAAAK1yM+AAAAADMzs70AAAAAAAAAAAAAAAAK1yM+CtcjvgAAAAAAAAAAAAAAADMzs70AAAAACtcjvgAAAAAAAAAAAAAAAAAAAAAK1yO+AAAAADMzs70AAAAAAAAAAAAAAAAK1yO+CtcjPgAAAAAAAAAA9OokP0IY0z706iQ/9OokP0IY0z706iQ/9OokP0IY0z706iQ/9Ookv0IY0z706iQ/9Ookv0IY0z706iQ/9Ookv0IY0z706iQ/9Ookv0IY0z706iS/9Ookv0IY0z706iS/9Ookv0IY0z706iS/9OokP0IY0z706iS/9OokP0IY0z706iS/9OokP0IY0z706iS/53zdPtOASr/nfN0+53zdPtOASr/nfN0+53zdPtOASr/nfN0+53zdvtOASr/nfN0+53zdvtOASr/nfN0+53zdvtOASr/nfN0+53zdvtOASr/nfN2+53zdvtOASr/nfN2+53zdvtOASr/nfN2+53zdPtOASr/nfN2+53zdPtOASr/nfN2+53zdPtOASr/nfN2+"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteOffset": 0,
+      "byteLength": 288,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteOffset": 288,
+      "byteLength": 288,
+      "target": 34962
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3",
+      "min": [
+        -0.16,
+        -0.0875,
+        -0.16
+      ],
+      "max": [
+        0.16,
+        0.25,
+        0.16
+      ]
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 24,
+      "type": "VEC3"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint-and-build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y clang clang-tidy clang-format cmake make g++ \
+          libgl1-mesa-dev libx11-dev libxrandr-dev libxi-dev \
+          libxinerama-dev libxcursor-dev libxkbcommon-dev libwayland-dev
+
+      - name: Check formatting
+        run: |
+          find . -name "*.cpp" -o -name "*.hpp" -o -name "*.tpp" -not -path "./build/*" \
+            | xargs clang-format --dry-run --Werror
+
+      - name: Make compilation script executable
+        run: chmod +x ./compile.sh
+
+      - name: Build project
+        run: ./compile.sh re
+
+      - name: Run clang-tidy
+        run: |
+          find . -name "*.cpp" -not -path "./build/*" -not -path "./libs/gui_client/*" \
+            -not -path "./libs/gui_protocol/*" \
+            | xargs clang-tidy -p build
